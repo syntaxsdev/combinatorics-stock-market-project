@@ -21,6 +21,18 @@ if (AAPLChange > 0):
     {2}% from the leveraged LONG S&P index.
     {3}% from the leveraged LONG NASDAQ index.
     '''.format(SPX_anticipated, NDAQ_anticipated, SPX_lev_up, NDAQ_lev_up))
+    print('''
+                      ($AAPL)
+                    /         \\
+                   /           \\    
+                (S&P)        (NASDAQ)
+                /   \\        /     \\
+            {0}%   {1}%   {2}%  {3}%
+              /       \\     /        \\   
+           ($UPRO)  ($SPY) ($TQQQ)  ($QQQ) 
+
+
+    '''.format(SPX_lev_up, SPX_anticipated, NDAQ_lev_up, NDAQ_anticipated))
 
 elif (AAPLChange < 0):
     #AAPL percentage change on the day is negative.
@@ -31,3 +43,15 @@ elif (AAPLChange < 0):
     {2}% from the leveraged SHORT S&P index.
     {3}% from the leveraged SHORT NASDAQ index.
     '''.format(abs(SPX_anticipated), abs(NDAQ_anticipated), abs(SPX_lev_down), abs(NDAQ_lev_down)))
+    print('''
+                      ($AAPL)
+                    /         \\
+                   /           \\    
+                (S&P)        (NASDAQ)
+                /   \\        /     \\
+            {0}%   {1}%   {2}%  {3}%
+              /       \\     /        \\   
+           ($SPXU)  ($SPY) ($SQQQ)  ($QQQ) 
+
+
+    '''.format(SPX_lev_down, SPX_anticipated, NDAQ_lev_down, NDAQ_anticipated))
